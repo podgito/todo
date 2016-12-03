@@ -1,5 +1,11 @@
 {
     "name": "Padraic Duffy",
     "weekBeginning": "2016-12-10",
-    "tasks" : []
+    "tasks" : [
+        {
+            "title" : "Task structure",
+            "description" : "Define the task json structure from which the UI is displayed",
+            "time" : 4
+        }
+    ]
 }
