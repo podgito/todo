@@ -1,0 +1,24 @@
+.task-item{
+    background-color: red;
+    border-radius: 3px;
+    color: white;
+    height: 80px;
+    border: 2px solid #000;
+    cursor: move;
+}
+
+.task-item.over{
+    border: 2px dashed #000;
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+

@@ -1,0 +1,41 @@
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body data-ng-app="app">
+        <div class="container" data-ng-controller="taskController">
+            
+            <div class="row">
+                
+                <div class="col-md-4" draggable-task>
+                    <div class="task-item">
+                        Task 1
+                    </div>
+                </div>
+                <div class="col-md-4" draggable-task>
+                     <div class="task-item">
+                        Task 2
+                    </div>
+                </div>
+                <div class="col-md-4" draggable-task>
+                     <div class="task-item">
+                        Task 3
+                    </div>
+                </div>
+               
+            </div>
+            
+            <button class="btn">Test</button>
+            
+        </div>
+        
+        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/controllers/taskController.js"></script>
+        <script type="text/javascript" src="app/directives/draggableTask.js"></script>
+        
+        
+    </body>
+</html>

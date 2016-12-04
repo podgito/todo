@@ -5,7 +5,8 @@
         {
             "title" : "Task structure",
             "description" : "Define the task json structure from which the UI is displayed",
-            "time" : 4
+            "time" : 4,
+            "icon": null
         }
     ]
 }
