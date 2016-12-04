@@ -1,32 +1,41 @@
 <html>
-    
-    <head>
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/site.css">
-    </head>
-    <body data-ng-app="app">
-        <div class="container" data-ng-controller="taskController">
-            
-            <div class="row">
-                
-                <div class="col-md-push-2"></div>
-                <!--allow for up to 8 hours-->
-                <div class="col-md-1" data-ng-repeat="task in tasks">
-                    <div class="task-item">{{task.name}}</div>
-                </div>
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body data-ng-app="app">
+    <div class="container" data-ng-controller="taskController">
 
 
+        <div class="row" dnd-list="tasks">
+            <div class="col-md-push-2"></div>
+
+            <div class="col-md-2" data-ng-repeat="task in tasks" dnd-draggable="task">
+                <div class="task-item">{{task.name}}</div>
             </div>
-            
-            <button class="btn">Test</button>
-            
         </div>
-        
-        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
-        <script type="text/javascript" src="app/app.js"></script>
-        <script type="text/javascript" src="app/controllers/taskController.js"></script>
-        <script type="text/javascript" src="app/directives/draggableTask.js"></script>
-        
-        
-    </body>
+
+        <ul dnd-list="list">
+            <li ng-repeat="task in tasks" dnd-draggable="item" dnd-effect-allowed="move" dnd-moved="list.splice($index, 1)">
+                {{task.name}}
+            </li>
+        </ul>
+
+
+
+
+        <button class="btn">Test</button>
+
+    </div>
+
+    <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="scripts/dndLists.min.js"></script>
+    <script type="text/javascript" src="app/controllers/taskController.js"></script>
+    
+
+</body>
+
 </html>
