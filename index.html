@@ -9,22 +9,13 @@
             
             <div class="row">
                 
-                <div class="col-md-4" draggable-task>
-                    <div class="task-item">
-                        Task 1
-                    </div>
+                <div class="col-md-push-2"></div>
+                <!--allow for up to 8 hours-->
+                <div class="col-md-1" data-ng-repeat="task in tasks">
+                    <div class="task-item">{{task.name}}</div>
                 </div>
-                <div class="col-md-4" draggable-task>
-                     <div class="task-item">
-                        Task 2
-                    </div>
-                </div>
-                <div class="col-md-4" draggable-task>
-                     <div class="task-item">
-                        Task 3
-                    </div>
-                </div>
-               
+
+
             </div>
             
             <button class="btn">Test</button>
